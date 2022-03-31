@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Car Details Form</h1>
+    <form action="#" th:action="@{/car}" th:object="${car}" method="post">
+    	<p>Id: <input type="text" th:field="*{id}" /></p>
+        <p>Owner Name: <input type="text" th:field="*{OwnerName}" /></p>
+        <p>Car Name: <input type="text" th:field="*{CarName}" /></p>
+        <p>Color: <input type="text" th:field="*{color}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
+    <a href="/retrievecars">Retrieve cars</a>
+</body>
+</html>
